@@ -8,7 +8,6 @@ def to_csv_file(filename, headers, rows, delimiter=",", new_line="\n"):  # Со�
             f.write(delimiter.join(row) + new_line)  # Записыаем построчно данные в файл
 
 
-
 headers_list = ['longitude', 'latitude', 'housing_median_age', 'total_rooms', 'total_bedrooms', 'population', 'households', 'median_income', 'median_house_value']
 data = [
     ['-122.050000', '37.370000', '27.000000', '3885.000000', '661.000000', '1537.000000', '606.000000', '6.608500', '344700.000000'],
