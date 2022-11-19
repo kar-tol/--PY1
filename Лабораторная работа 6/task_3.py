@@ -1,7 +1,21 @@
 OUTPUT_FILE = "output.csv"  # Файл, в который записываем данные в формате csv
 
 
-def to_csv_file(filename, headers, rows, delimiter=",", new_line="\n"):  # Создаем функцию, которая принимает 5 аргументов, указанных в задании
+def to_csv_file(
+        filename: str, headers: list[str], rows: list[list], 
+        delimiter: str = ",", new_line: str = "\n"
+):  # Создаем функцию, которая принимает 5 аргументов, указанных в задании
+
+    """
+    Данная функция записывает передаваемые ей данные в формате csv
+    :param filename: Название выходного файла
+    :param headers: Список заголовков
+    :param rows: Список данных
+    :param delimiter: Разделитель между значениями
+    :param new_line:  Разделитель строк
+    :return:
+    """
+    
     with open(filename, "w", encoding="utf-8") as f:  # Открываем выходной файл для записи
         f.write(delimiter.join(headers) + new_line)  # Записываем в файл заголовки
         for row in rows:
